@@ -3,4 +3,5 @@ Games I built/will build while learning Godot
 
 ## List of Targets
 
-- [ ] Hoppy days
+- [ ] Dodge the Creeps
+- [ ] Hoppy Days
