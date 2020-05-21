@@ -13,7 +13,7 @@ size = Vector3( 30, 2, 30 )
 
 [node name="Level" type="Spatial"]
 
-[node name="OutOfBounds" type="RigidBody" parent="."]
+[node name="OutOfBounds" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="OutOfBounds"]

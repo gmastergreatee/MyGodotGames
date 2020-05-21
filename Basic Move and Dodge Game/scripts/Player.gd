@@ -5,7 +5,6 @@ export var Speed = 5;
 export(float, 0, 1) var Damp = 0.1
 
 func _ready() -> void:
-	
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -30,16 +29,11 @@ func _physics_process(delta: float) -> void:
 		velocity.z = lerp(velocity.z, 0, Damp)
 		
 #	move the player
-	move_and_slide(velocity)
-	
-#	fall down if goes outside
+	velocity = move_and_slide(velocity, Vector3.UP)
 	if not is_on_floor():
-		move_and_slide(Vector3(0, lerp(0, -Speed, 0.1), 0))
-
-
-
-
-
+#		fall if not on floor
+		velocity.y = -Speed
+	
 
 
 
