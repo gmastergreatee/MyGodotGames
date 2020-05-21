@@ -39,7 +39,7 @@ material/0 = null
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 script = ExtResource( 2 )
-Speed = 20
-MaxSpeed = 50
-Damp = 0.17
-RotateSpeed = 10
+Speed = 8
+MaxSpeed = 20
+Friction = 5.0
+RotateSpeed = 15
