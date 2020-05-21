@@ -16,10 +16,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = reset_move(delta, velocity.x)
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x -= Speed * delta * Friction
-		rotate_z(deg2rad(RotateSpeed))
+		$MeshInstance.rotate_z(deg2rad(RotateSpeed))
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x += Speed * delta * Friction
-		rotate_z(-deg2rad(RotateSpeed))
+		$MeshInstance.rotate_z(-deg2rad(RotateSpeed))
 	else:
 		velocity.x = reset_move(delta, velocity.x)
 	
@@ -27,10 +27,10 @@ func _physics_process(delta: float) -> void:
 		velocity.z = reset_move(delta, velocity.z)
 	elif Input.is_action_pressed("ui_up"):
 		velocity.z -= Speed * delta * Friction
-		rotate_x(-deg2rad(RotateSpeed))
+		$MeshInstance.rotate_x(-deg2rad(RotateSpeed))
 	elif Input.is_action_pressed("ui_down"):
 		velocity.z += Speed * delta * Friction
-		rotate_x(deg2rad(RotateSpeed))
+		$MeshInstance.rotate_x(deg2rad(RotateSpeed))
 	else:
 		velocity.z = reset_move(delta, velocity.z)
 	
