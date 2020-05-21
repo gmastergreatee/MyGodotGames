@@ -43,10 +43,6 @@ material/0 = null
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 script = ExtResource( 2 )
-Speed = 8
-MaxSpeed = 20
-Friction = 5.0
-RotateSpeed = 15
 
 [node name="CameraTarget" type="Spatial" parent="Player"]
 transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 4, 8 )

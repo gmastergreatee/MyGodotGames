@@ -1,10 +1,10 @@
 extends KinematicBody
 
 var velocity = Vector3(0,0,0)
-export var Speed = 5;
-export var MaxSpeed = 200;
-export(float, 0, 10) var Friction = 0.1
-export(int, 1, 360) var RotateSpeed = 30;
+export var Speed = 8;
+export var MaxSpeed = 20;
+export(float, 0, 10) var Friction = 5
+export(int, 1, 360) var RotateSpeed = 15
 var resetPosition = false
 var allowInputs = true;
 
