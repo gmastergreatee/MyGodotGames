@@ -8,12 +8,15 @@ func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+	var rot_x = 0
+	var rot_z = 0
 	
 #	process inputs
 	if Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_right"):
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = -Speed
+		
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x = Speed
 	else:
@@ -27,6 +30,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = Speed
 	else:
 		velocity.z = lerp(velocity.z, 0, Damp)
+		
+	
 		
 #	move the player
 	velocity = move_and_slide(velocity, Vector3.UP)
