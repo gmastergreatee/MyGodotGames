@@ -5,11 +5,18 @@ export var Speed = 5;
 export var MaxSpeed = 200;
 export(float, 0, 10) var Friction = 0.1
 export(int, 1, 360) var RotateSpeed = 30;
+var resetPosition = false
 
 func _ready() -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
+#	re-spawning code
+	if resetPosition:
+		velocity = Vector3.ZERO
+		set_translation(Vector3(0, 1, 0))
+		resetPosition = false
+		return
 	
 #	process inputs
 	if Input.is_action_pressed("ui_left") and Input.is_action_pressed("ui_right"):
@@ -49,10 +56,6 @@ func reset_move(delta: float, vel: float) -> float:
 		vel = lerp(vel, 0, delta * Friction)
 	return vel
 
-
-
-
-
-
-
-
+func _on_OutOfBounds_body_entered(body: Node) -> void:
+	if body == self:
+		resetPosition = true
