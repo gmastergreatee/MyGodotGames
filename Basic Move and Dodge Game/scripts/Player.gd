@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 	if resetPosition:
 		velocity = Vector3.ZERO
 		set_translation(Vector3(0, 1, 0))
+		$MeshInstance.set_rotation(Vector3(0, 0, 0))
 		resetPosition = false
 		return
 	
@@ -55,7 +56,3 @@ func reset_move(delta: float, vel: float) -> float:
 	if vel != 0:
 		vel = lerp(vel, 0, delta * Friction)
 	return vel
-
-func _on_OutOfBounds_body_entered(body: Node) -> void:
-	if body == self:
-		resetPosition = true
