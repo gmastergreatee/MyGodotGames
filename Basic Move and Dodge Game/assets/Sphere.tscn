@@ -4,7 +4,7 @@
 
 [sub_resource type="SphereMesh" id=2]
 
-[node name="KinematicBody" type="KinematicBody"]
+[node name="Ball" type="KinematicBody"]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 shape = SubResource( 1 )
